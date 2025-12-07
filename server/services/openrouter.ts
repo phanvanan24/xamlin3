@@ -1,7 +1,6 @@
 import { GeometryData, DistanceResult } from "../../client/src/lib/stores/useGeometry";
 
-// Read OpenRouter API key from environment variable for deployments
-const OPENROUTER_API_KEY = "sk-or-v14b19aef4d32102238aecf622cf3f89349efd157d689390b98362db6dd73944b5";
+const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
 if (!OPENROUTER_API_KEY) {
   throw new Error("OPENROUTER_API_KEY is not set. Please configure environment variable.");
 }
